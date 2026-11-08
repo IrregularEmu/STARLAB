@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.12)
+project(ucus LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(ucus main.cpp)
+add_executable(kontroller tests.cpp)
+enable_testing()
+add_test(NAME model_kontrolleri COMMAND kontroller ${CMAKE_CURRENT_SOURCE_DIR}/ornek.txt)

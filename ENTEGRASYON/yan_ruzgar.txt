@@ -1,0 +1,26 @@
+# SENTETIK serbest ucus; ilk durum ray cikisi sonrasini temsil eder.
+# dt site_m start_height_AGL_m axial_speed pitch_deg windN windE windD atmosphere
+setup 0.02 980 10 80 75 0 0 0 standard
+# name duration burn thrust wet_mass dry_mass cg_x Iwet_xyz Idry_xyz
+phase birlesik 1.7 1.05 300 10 9.8 0 0.12 4 4 0.115 3.9 3.9
+# name S length ref_xyz incidence_limit_deg
+# row Mach CDoff CDon CDangle2 CLalpha CLq CYbeta Cl0 Clp Cmalpha Cmq Cnbeta Cnr
+motor 0 200
+motor 0.4 350
+motor 1.05 0
+wind 0 0 1 0
+wind 1.7 0 2 0
+surface govde_burun 0.02 0.16 0.25 0 0 20
+row 0 0.35 0.30 0.2 1.0 0 -1.0 0 0 0 0 0 0
+row 0.8 0.40 0.35 0.3 1.1 0 -1.1 0 0 0 0 0 0
+surface kanatcik_takimi 0.012 0.16 -0.65 0 0 20
+row 0 0.18 0.18 0.4 3.0 0 -3.0 0 -0.4 0 -3 0 -3
+row 0.8 0.22 0.22 0.5 3.2 0 -3.2 0 -0.5 0 -4 0 -4
+phase ust 2.5 0.9 160 5 4.9 0.20 0.08 1.9 1.9 0.078 1.85 1.85
+surface ust_govde 0.018 0.15 0.40 0 0 20
+row 0 0.34 0.28 0.2 0.9 0 -0.9 0 0 0 0 0 0
+row 0.8 0.38 0.32 0.3 1 0 -1 0 0 0 0 0 0
+surface ust_kanatcik_takimi 0.012 0.15 -0.45 0 0 20
+row 0 0.18 0.18 0.4 2.8 0 -2.8 0 -0.4 0 -3 0 -3
+row 0.8 0.20 0.20 0.5 3.0 0 -3.0 0 -0.5 0 -4 0 -4
+
